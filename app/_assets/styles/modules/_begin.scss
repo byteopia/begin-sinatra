@@ -1,0 +1,10 @@
+.begin {
+	margin: 2em;
+
+	&:before {
+		@include ion;
+		content: '\f13d';
+		font-size: 1.5em;
+		margin: -4px 8px 0 0;
+	}
+}

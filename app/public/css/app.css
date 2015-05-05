@@ -1,0 +1,54 @@
+html {
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  height: 100%; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+body {
+  background-color: #fff;
+  height: 100%;
+  margin: 0; }
+
+a {
+  color: #7ab232; }
+
+[class^="ion"]::before,
+[class*=" ion"]::before {
+  vertical-align: middle; }
+
+.container {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto; }
+  .container:after {
+    content: " ";
+    display: block;
+    clear: both; }
+  .container:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.begin {
+  margin: 2em; }
+  .begin:before {
+    display: inline-block;
+    font-family: "Ionicons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-rendering: auto;
+    line-height: 1;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: '\f13d';
+    font-size: 1.5em;
+    margin: -4px 8px 0 0; }
