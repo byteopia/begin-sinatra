@@ -1,3 +1,7 @@
 development:
   root:              './app'
   port:              9000
+
+production:
+  root:              './app'
+  port:              9000

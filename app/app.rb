@@ -1,3 +1,6 @@
+ENV['ENV'] ||= 'development'
+ENV['RACK_ENV'] ||= ENV['ENV']
+
 require 'sinatra'
 require 'sinatra/config_file'
 require 'sinatra/assetpack'
