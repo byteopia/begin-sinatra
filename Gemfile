@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 gem 'sinatra'
-gem 'sinatra-config-file'
+gem 'sinatra-contrib', require: 'sinatra/config_file'
 gem 'sinatra-assetpack'
 gem 'coffee-script'
 gem 'sass-globbing'
