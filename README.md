@@ -17,14 +17,12 @@ $ npm install -g bower
 $ bower install
 ```
 
-Gulp
+Serve
 -----
 ```
 $ gulp serve
 ```
 
-Ruby
------
 ```
 $ ruby app/app.rb
 ```
