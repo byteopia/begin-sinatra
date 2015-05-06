@@ -1,9 +1,8 @@
 ENV['ENV'] ||= 'development'
 ENV['RACK_ENV'] ||= ENV['ENV']
 
-require 'sinatra'
-require 'sinatra/config_file'
-require 'sinatra/assetpack'
+require 'bundler'
+Bundler.require :default, ENV['ENV'].to_sym
 
 config_file '../config.yml'
 
