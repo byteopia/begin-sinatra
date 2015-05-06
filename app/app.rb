@@ -7,10 +7,10 @@ Bundler.require :default, ENV['ENV'].to_sym
 config_file '../config.yml'
 
 assets do
-  serve '/js',               :from => 'public/js'
-  serve '/css',              :from => 'public/css'
-  serve '/fonts',            :from => 'public/fonts'
-  serve '/bower_components', :from => '../bower_components'
+  serve '/js',               from: 'public/js'
+  serve '/css',              from: 'public/css'
+  serve '/fonts',            from: 'public/fonts'
+  serve '/bower_components', from: '../bower_components'
 
   js :application, [
     '/js/app.js'
