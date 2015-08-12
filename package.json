@@ -1,6 +1,6 @@
 {
   "name": "begin-sinatra",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "All the things you need to start a Sinatra project you'll never finish.",
   "author": "Byteopia",
   "contributors": [
@@ -13,12 +13,15 @@
   "main": "app/index.html",
   "repository": {
     "type": "git",
-    "url": "https://github.com/byteopia/begin"
+    "url": "https://github.com/byteopia/begin-sinatra"
   },
   "aliasify": {
     "aliases": {
-      "base":         "./app",
-      "app":          "./app/_assets/scripts/app.coffee"
+      "base": "./app",
+      "app": "./app/_assets/scripts/app.coffee",
+      "views": "./app/_assets/scripts/views",
+      "routers": "./app/_assets/scripts/routers",
+      "helpers": "./app/_assets/scripts/helpers"
     },
     "verbose": false
   },
@@ -40,7 +43,9 @@
     "hogan.js": "^3.0.2",
     "hoganify": "^0.2.0",
     "jquery": "^2.1.3",
+    "magnific-popup": "^1.0.0",
     "main-bower-files": "^2.7.0",
+    "path": "^0.11.14",
     "rev-del": "^1.0.4",
     "underscore": "^1.8.3"
   }

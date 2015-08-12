@@ -1,27 +1,28 @@
-ENV['ENV'] ||= 'development'
-ENV['RACK_ENV'] ||= ENV['ENV']
+# @note this file is more of a configuration at this point
+#   it can include routes, set options, and determine assets to serve
+#   but it shouldn't really contain any logic.
+require 'helpers'
+require 'assets'
+require 'routing'
 
-require 'bundler'
-Bundler.require :default, ENV['ENV'].to_sym
+module Begin
+  module Web
+    class App < Sinatra::Base
+      # @todo load cookie secret from config
+      use Rack::Session::Cookie, secret: ENV['COOKIE_SECRET'], key: 'begin.session'
 
-config_file '../config.yml'
+      set :server,          'puma'
+      set :port,            ENV['PORT'].to_i
+      set :root,            './app'
 
-assets do
-  serve '/js',               from: 'public/js'
-  serve '/css',              from: 'public/css'
-  serve '/fonts',            from: 'public/fonts'
-  serve '/bower_components', from: '../bower_components'
+      register Sinatra::Flash
+      register Sinatra::AssetPack
+      register Begin::Web::Routing::Home
 
-  js :application, [
-    '/js/app.js'
-  ]
-
-  css :application, [
-    '/bower_components/ionicons/css/ionicons.min.css',
-    '/css/app.css'
-  ]
-end
-
-get '/' do
-  erb :'home/home'
+      helpers do
+        include Begin::Web::Helpers
+      end
+      extend    Begin::Web::Assets
+    end
+  end
 end
